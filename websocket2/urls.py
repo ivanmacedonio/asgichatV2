@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from box.views import boxdump
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('boxes/', boxdump, name='boxes')
 ]
